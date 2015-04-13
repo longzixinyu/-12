@@ -8,8 +8,8 @@ import java.io.FileInputStream;
 /**
  * Created by ljc10860 on 2015/4/9.
  */
-public class SheetClass {
-   public String[] getResult(){
+public class SelectCityName {
+   public String[] getCityName(){
 
        //将城市名从excel变种取出并放入数组
        String[] result=new String[100];

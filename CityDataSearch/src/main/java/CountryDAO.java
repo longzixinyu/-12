@@ -11,8 +11,8 @@ public class CountryDAO {
         int CITY_NUMBER = 100;
         String[] result = new String[100];   //储存城市名数组
         int[] result1 = new int[100];   //储存城市id数组
-        SheetClass sheetClass = new SheetClass();
-        result = sheetClass.getResult();      //得到储存城市名的数组
+        SelectCityName selectCityName = new SelectCityName();
+        result = selectCityName.getCityName();      //得到储存城市名的数组
         DataCon dataCon = new DataCon();
         Connection conn = dataCon.getConnection();  //连接数据库
         PreparedStatement statement = null;
@@ -26,7 +26,8 @@ public class CountryDAO {
           while(resultSet.next()) {
               result1[i] = resultSet.getInt("id");   //获取结果集resultSet中的id
               i++;
-          }}
+          }
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
